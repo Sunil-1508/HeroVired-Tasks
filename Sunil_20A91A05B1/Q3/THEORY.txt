@@ -1,0 +1,21 @@
+To deploy a react application on s3 first we need a create a s3 bucket
+	1. Go to s3.
+	2. Click on create bucket.
+	3. Enter the Bucket name and bucket ownership.
+	4. Allow public access to your instance.
+	5. Now the Bucket will be created.
+
+Download a react js application and open visual studio code and add your react folder to our workspace and follow the below steps
+	1. open new terminal and navigate to your application.
+	2. install nodejs (npm install node).
+	3. npm install (to install all the dependencies required by  your application.
+	4. npm run build (to build your application).
+	5. npm start (it will starts your application and application will be opened in the browser   automatically).
+
+Go to the Bucket which is created and click on upload click on add files and navigate to the build folder of your application and select all the files. and then click on upload folder and select the folders which in build folder, click on upload and enable static website hosting and change the policy
+
+copy the url and paste in browser to get the application.
+
+
+
+                      
