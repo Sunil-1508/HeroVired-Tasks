@@ -1,0 +1,35 @@
+steps to configure ec2 instance is as follows:
+	1. Click on Launch Instance.
+	2. Select AMI (Amazon Machine Image)
+	3.Select the instance type (t2 micro)
+	4.If you have existing keypair select it or otherwise create  a new keypair.
+	5. select vpc, subnets, make sure that auto assign public ip is enable.
+	6. Edit the Security group rules and add all traffic 
+	7. Click on Launch instance enable monitoring.
+We can connect instance by using ssh or EC2 instance connect, and do the following commans
+	-* Navigate to Root user -* [ sudo su] 
+	1. yum update (to update the instance)
+	2.  yum install nodejs (installing nodejs)
+	3. yum install git(installing git)
+	4. git clone <githubrepositoryurl> 
+	5. Navigate to the directory where your application is present
+	6. npm install (to install required dependencies requires by your application.
+	7. npm run  build (it is used to build an application , this 	will generate an optimized code)
+	8. Install a webserver nginx
+	9. systemctl start nginx (starting nginx)
+	10.  vi  /etc/nginx/conf.d/myapp.conf
+	11. in the editor modify the configartion file with the following content
+      server {
+            listen 80;
+          server_name myapp.example.com; # Replace with your domain name
+        root path; # Replace with the path of application's build       directory
+           location / {
+                   try_files $uri /index.html;
+             }
+        }
+  12. Copy build directory to nginx configaration directory cp -r    /path/to/your/build/directory/* /var/www/myapp/build/
+	13. sudo service nginx restart restart webserver
+	14. paste the public ip in the browser.
+
+
+
