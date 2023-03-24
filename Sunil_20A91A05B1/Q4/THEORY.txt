@@ -1,0 +1,45 @@
+Creating a Database and connecting to a ec2 instance.
+Follow the below steps
+	1. Go to rds 
+	2. Click on create a database.
+	3. select (easy create)
+	4. select the database (Mariadb)
+	5. click on free tire eligible
+	6. Enter database identifier 
+	7. Enter master username and password
+	10. click on create , it will take 5min time to Crete a database.
+
+Go to Ec2 and create a ec2
+	1. Click on Launch Instance.
+	2. Give a tag (optional)
+	3. Select AMI (Amazon Machine Image)
+	4.Select the instance type (t2 micro)
+	5.If you have existing keypair select it or otherwise create  a new keypair.
+	6. select vpc, subnets, make sure that auto assign public ip is enable.
+	7. Edit the Security group rules and add all traffic 
+	8. Click on Launch instance 
+Go to rds
+  -> click on database name and scroll down and click on set up ec2 connection and select the ec2 instance which has been created and click on confirm.
+Go to EC2
+	->connect to the ec2 instance 
+	-> navigate to root user
+	-> sudo yum install mariadb (installing mariadb)
+	->mysql -h <endpoint> -P <port> -u <username> -p
+	-> Enter password 
+	-> mysql will be connected.
+creating a table
+	-> create a database 
+		create database databasename;
+	-> use databasename;
+	-> create a table
+		create table tablename
+		(
+			variblename1 datatype,
+			.
+			.	
+			.
+			variablenamen datatype
+		);
+			
+
+
